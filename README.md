@@ -3,6 +3,9 @@
 ### Apple M3 Max
 
 ```
+❯ node --version
+v22.13.0
+
 ❯ npm run benchmark 
 
 > dd-trace-vitest-debug@1.0.0 benchmark
