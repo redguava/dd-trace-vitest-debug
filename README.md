@@ -3,6 +3,8 @@
 ### Apple M3 Max
 
 ```
+❯ npm run benchmark 
+
 > dd-trace-vitest-debug@1.0.0 benchmark
 > hyperfine --warmup 5 'npm run jest-without-dd-trace' 'npm run vitest-without-dd-trace' 'npm run jest-with-dd-trace' 'npm run vitest-with-dd-trace'
 
