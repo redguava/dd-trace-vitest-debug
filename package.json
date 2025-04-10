@@ -4,9 +4,9 @@
   "main": "index.js",
   "scripts": {
     "vitest-without-dd-trace": "vitest --no-watch",
-    "vitest-with-dd-trace": "NODE_OPTIONS=\"--import dd-trace/register.js --require dd-trace/ci/init\" vitest --no-watch",
+    "vitest-with-dd-trace": "DD_CIVISIBILITY_AGENTLESS_ENABLED=true NODE_OPTIONS=\"--import dd-trace/register.js --require dd-trace/ci/init\" vitest --no-watch",
     "jest-without-dd-trace": "jest",
-    "jest-with-dd-trace": "NODE_OPTIONS=\"--require dd-trace/ci/init\" jest --no-watch",
+    "jest-with-dd-trace": "DD_CIVISIBILITY_AGENTLESS_ENABLED=true NODE_OPTIONS=\"--require dd-trace/ci/init\" jest --no-watch",
     "benchmark": "hyperfine --warmup 5 'npm run jest-without-dd-trace' 'npm run vitest-without-dd-trace' 'npm run jest-with-dd-trace' 'npm run vitest-with-dd-trace'"
   },
   "author": "",
